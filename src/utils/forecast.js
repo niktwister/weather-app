@@ -22,7 +22,7 @@ function forecast(lat,long,cb){
             else if(body.error)
                 cb(`weather service responded with error.`)
             else
-                cb(undefined, `${body.current.weather_descriptions[0]}. It's ${body.current.temperature}\u{2103}  outside. But feels like ${body.current.feelslike}.`)
+                cb(undefined, `${body.current.weather_descriptions[0]}. It's ${body.current.temperature}\u{2103}  outside, but feels like ${body.current.feelslike}. The humidity is ${body.current.humidity}%.`)
         }
     )
 
