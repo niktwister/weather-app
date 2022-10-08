@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    background-color: #333333;
+    font-size: 16px;
+}
+
+body{
+    width: 90%;
+    min-height: 100vh;
+    background-color: #EEE3CB;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+header{
+    padding: 2rem;
+    text-align: center;
+    color: #333333;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 300;
+    text-shadow: 1rem 1rem 1.25rem rgba(0,0,0,0.2);
+}
+
+.italicize{font-style: italic;}
+
+nav{
+    background-color: #333333;
+    font-size: clamp(1.5rem,3vw,2rem);
+    line-height: 2em;
+    text-align: center;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    display: flex;
+}
+
+nav ul li{
+    flex: 1;
+}
+
+nav ul li:nth-child(even){
+    background-color: #888888;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #EEE3CB;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+}
+
+nav ul li a:hover{
+    color: #333333;
+    background-color: #EEE3CB;
+}
+
+main{
+    padding: 1rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #333333;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer{
+    padding: 1rem;
+    background-color: #888888;
+    color: #EEE3CB;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: bold;
+    text-align: right;
+}
+
+
+input{
+    border: 0.0625rem solid #333333;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0.5rem;
+    background: #EEE3CB;   
+    outline: none;
+    color: #333333;
+}
+
+button{
+    border: 0.0625rem solid #333333;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0.5rem;
+    background: #333333;
+    color: #EEE3CB;
+    cursor: pointer;      
+}
+
+main section p#message-1{
+    font-weight: bold;
+}
+
+@media (max-width: 550px){
+
+    nav ul, main{
+        flex-direction: column;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+}
